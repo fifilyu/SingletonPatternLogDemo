@@ -5,10 +5,10 @@
 
 class SpLog:
     def __init__(self, path):
-        self.f = open(path, 'w')
+        self.f = open(path, 'a', encoding='utf-8')
 
     def info(self, msg):
-        self.f.write(msg)
+        self.f.write(msg+'\n')
         print(msg)
 
     @staticmethod
